@@ -69,7 +69,7 @@ Read additional [styling tips](https://github.com/inma-no/advertsspec/blob/maste
 ## 5. JavaScript libaries
 The following JavaScript libraries are allowed:
 
-* Latest to minimized jQuery verisons from Google CDN services (add link). 
+* The two latest minimized jQuery verisons from Google CDN services (add link). 
  * jQuery can _not_ be used for animation
 * Greensock library for animations hosted from Cloudfare (add link)
 
