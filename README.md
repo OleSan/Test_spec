@@ -31,11 +31,18 @@ Note: The size limitation is on the initial load. You can lazy load additional c
 * Only trigger audio or video resources using `touch` or `mouse` events.
 
 ## 3. Click counter
-You must use the following method when [adding click tags](https://github.com/inma-no/advertsspec/blob/master/spec/clicktag.md) to the ad:
+You can use both anchor tags and JavaScript for click handling. If you are going to use JavaScript for this, you'll need to add a little snippet of code to get click counted in AdTech. 
 
-	<div id="Banner" onclick="window.open('http://www.url.no','new_window');">
+In HTML file:
+```
+<script>var clickCounter = '_ADTECH_';</script>
+```
 
-Or alternativly you can add an event listener using JavaScript.
+In the JS-file:
+```
+// where you define the landing page URL in your JS file. 
+var landingpage = clickCounter + 'www.example.com';
+```
 
 Note: [Paid links are required by Google](https://support.google.com/webmasters/answer/96569?hl=en) to have the attribute `rel="nofollow"`
 
@@ -43,12 +50,12 @@ Note: [Paid links are required by Google](https://support.google.com/webmasters/
 
 CSS rules can only be set to classes or IDs. You can not set rules directly to elements like span or div.
 
-The div element should only have the following styling:
+The div contaner element should only have the following styling:
 
     display: block; /* browser default */
     position: static; /* browser default */
-    width: 100%;
-    height: 250px;
+    width: XXXpx; //change to format width
+    height: XXXpx; //change to format height
     cursor: pointer;
 
 Additional styling must be done on a new div/element within that container (ex Banner in the sample below).
@@ -60,12 +67,17 @@ Additional styling must be done on a new div/element within that container (ex B
 
 Read additional [styling tips](https://github.com/inma-no/advertsspec/blob/master/spec/stylingingtips.md).
 
-## 5. Banner delivery
-Banners should be delivered in a zip file with a flat file structrue, no folders. Name the HTML file index.html. This to ensure best possible support for adservers.
+## 5. JavaScript libaries
+The following JavaScript libraries are allowed:
 
-## 6. Third party code
+* Latest to minimized jQuery verisons from Google CDN services (add link). 
+ * jQuery can _not_ be used for animation
+* Greensock library for animations hosted from Cloudfare (add link)
+
+## 6. Banner delivery
+Banners should be delivered in a zip file without folders. Name the HTML file index.html. The file names can only be written with 7bit ASCII characters, so no characters like @ or % etc. The HTML file should not have minimized code. This to ensure best possible support for AdTech.
+
+## 7. Third party code
 * Must be sent as JavaScript code
 
-## 7. Older formats
-Instead of making an HTML-banner, you can deliver an image adapted in height/width to different formats (mobile and tablet). For more information about the different sizes needed, please check the media site for instructions.
 
