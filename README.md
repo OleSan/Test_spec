@@ -1,6 +1,6 @@
 # Specification for HTML based adverts
 
-This is the specification for both the HTML banners on Schibsted sites that use AdTech as ad delivery system. 
+This is the specification for the HTML creatives on Schibsted sites that use AdTech as ad delivery system. 
 
 ## 1. Dimensions
 
@@ -45,7 +45,7 @@ var landingpage = clickCounter + 'www.example.com';
 
 Note: [Paid links are required by Google](https://support.google.com/webmasters/answer/96569?hl=en) to have the attribute `rel="nofollow"`
 
-## 4. Default styling of Banner
+## 4. Default styling of the creative
 
 CSS rules can only be set to classes or IDs. You can not set rules directly to elements like span or div.
 
@@ -57,7 +57,7 @@ The div contaner element should only have the following styling:
     height: XXXpx; //change to format height
     cursor: pointer;
 
-Additional styling must be done on a new div/element within that container (ex Banner in the sample below).
+Additional styling must be done on a new div/element within that container (ex Banner as container in the sample below).
 
     <div id="Banner" onclick="window.open('http://www.url.no','new_window');" 
     	style="display:block;width:100%;height: 250px;">
@@ -73,8 +73,8 @@ The following JavaScript libraries are allowed:
  * jQuery can _not_ be used for animation
 * Greensock library for animations hosted from Cloudfare (add link)
 
-## 6. Banner delivery
-Banners should be delivered in a zip file without folders. Name the HTML file index.html. The file names can only be written with 7bit ASCII characters, so no characters like @ or % etc. The HTML file should not have minimized code. This to ensure best possible support for AdTech.
+## 6. Creative delivery
+The creative should be delivered in a zip file without folders. Name the HTML file index.html. The file names can only be written with 7bit ASCII characters, so no characters like @ or % etc. The HTML file should not have minimized code. This to ensure best possible support for AdTech.
 
 ## 7. Third party code
 * Must be sent as JavaScript code
