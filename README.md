@@ -17,7 +17,7 @@ Note: The size limitation is on the initial load. You can lazy load additional c
 ## 2. Limitations
 
 * Viewport can not be set to device width within the ad 
-	~~`<meta name="viewport" content="width=devicewidth">`~~
+ * ~~`<meta name="viewport" content="width=devicewidth">`~~
 * The [Geo Location APIs](https://github.com/inma-no/advertsspec/blob/master/spec/geoapi.md) or other "HTML5"-APIs that require user confirmation, can only be used after a user interaction.
 * The HTML-file delivered should just be _one file_ with all CSS required for the ad inline in the HTML. The code should not be mimimized for better support in AdTech. 
 * JavaScript has to be in a seperate .js file, never inline in the HTML file. Add the JS file right before the ending body tag. 
