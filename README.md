@@ -34,7 +34,7 @@ You can use both anchor tags and JavaScript for click handling. If you are going
 
 In HTML file:
 ```
-<script>var clickCounter = '_ADTECH_';</script>
+<script>var clickCounter = '_ADCLICK_';</script>
 ```
 
 In the JS-file:
