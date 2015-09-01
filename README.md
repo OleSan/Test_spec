@@ -43,8 +43,6 @@ In the JS-file:
 var landingpage = clickCounter + 'www.example.com';
 ```
 
-Note: [Paid links are required by Google](https://support.google.com/webmasters/answer/96569?hl=en) to have the attribute `rel="nofollow"`
-
 ## 4. Default styling of the creative
 
 CSS rules can only be set to classes or IDs. You can not set rules directly to elements like span or div.
@@ -74,7 +72,7 @@ The following JavaScript libraries are allowed:
 * Greensock library for animations hosted from Cloudfare (add link)
 
 ## 6. Creative delivery
-The creative should be delivered in a zip file without folders. Name the HTML file index.html. The file names can only be written with 7bit ASCII characters, so no characters like @ or % etc. The HTML file should not have minimized code. This to ensure best possible support for AdTech.
+The creative should be delivered in a zip file without folders. Name the HTML file index.html. The file names should not include special characters like @ or %. The HTML file should not have minimized code. This to ensure best possible support for AdTech.
 
 ## 7. Third party code
 * Must be sent as JavaScript code
